@@ -59,3 +59,6 @@ The architecture combines a traditional three-tier structure (web, app, database
 #### Subnets:
 - Public Subnet: External ALB, API Gateway, CloudFront, WAF, Shield, Cognito, S3, DynamoDB, Route 53.
 - Private Subnet: Internal ALB, ECS containers, RDS Proxy, Lambda functions (via private link), RDS, ElastiCache Redis.
+
+#### Link to architectural diagram:
+https://drive.google.com/file/d/16u1JkQX0JvSH5hihLGgRfYbh0wi5fw7E/view?usp=sharing
