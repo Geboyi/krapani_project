@@ -9,7 +9,7 @@ The architecture is fronted by cloudfront which will route traffic to either ALB
 
 __Option One - Serverless__
 
-For serverless, we use the lambda functions. Lambda-a is a routing lambda whose job is simply routing - it does not perform business logic. It route to lambda-b. 
+For serverless, the lambda functions will be used. Lambda-a is a routing lambda whose job is simply routing - it does not perform business logic. It route to lambda-b. 
 
 Lambda-b is the main business logic function which will interact with other parts of the system. It will be deployed to have connectivity into the VPC so it can access the RDS, and ElastiCache services. Since it is the main processing function it is also made a target of the ALB, so the ALB can route to it. 
 
@@ -22,7 +22,7 @@ I may also want to use a global load balancer
 
 __Option two - Hybrid Solution__
 
-In this option, you also create a three tier architecture in the VPC to handle the web traffic.
+In this option, a three tier architecture is also created in the VPC to handle the web traffic.
 
 
 ## Flow Pattern:
