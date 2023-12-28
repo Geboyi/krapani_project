@@ -1,4 +1,4 @@
-###  krapani_project
+# krapani_project
 # Summary:
 An application is intended to be hosted in the cloud. It will be available on both mobile and web. It will be something like reddit and facebook combined. This app requires:
 - Instance or serverless service to host it
