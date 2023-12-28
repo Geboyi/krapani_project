@@ -82,5 +82,8 @@ In this option, a three tier architecture is also created in the VPC to handle t
 - Private Subnet: Internal ALB, ECS containers, RDS Proxy, Lambda functions (via private link), RDS, ElastiCache Redis.
 
 #### Link to architectural diagram:
+#### Hybrid three tier with serverless
 https://drive.google.com/file/d/16u1JkQX0JvSH5hihLGgRfYbh0wi5fw7E/view?usp=sharing
+#### Serverless 
+https://drive.google.com/file/d/1_yn3zV-wSbgivOPWraigTM3NqfjC69r6/view?usp=sharing
 
