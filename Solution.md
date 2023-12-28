@@ -2,16 +2,39 @@
 AWS Hybrid Three-Tier with Serverless Components and CI/CD: 
 The architecture combines a traditional three-tier structure (web, app, database) with serverless components (Lambda functions) for flexibility and scalability.
 
+Requirements were to be able to handle mobile and web traffic:
+Mobile traffic is handled by the API gateway while web traffic is handled by the ALB. 
+
+The architecture is fronted by cloudfront which will route traffic to either ALB or API Gateway based on the source of the request. Once traffic gets into the system we can use a completely serverless solution. 
+
+__Option One - Serverless__
+
+For serverless, we use the lambda functions. Lambda-a is a routing lambda whose job is simply routing - it does not perform business logic. It route to lambda-b. 
+
+Lambda-b is the main business logic function which will interact with other parts of the system. It will be deployed to have connectivity into the VPC so it can access the RDS, and ElastiCache services. Since it is the main processing function it is also made a target of the ALB, so the ALB can route to it. 
+
+Since lambda function scale well in the face of increasing traffic this solution design will be capable of handling large volume of user traffic. 
+
+All static content will be served from S3 and dynamic content from the lambda function. Cloudfront will cache some of the content hence improving user experience.
+
+Since it is supposed to be a global service with users all over the world I could consider using a database with global capabilities such as DynamoDB or Aurora. 
+I may also want to use a global load balancer 
+
+__Option two - Hybrid Solution__
+
+In this option, you also create a three tier architecture in the VPC to handle the web traffic.
+
+
 ## Flow Pattern:
 #### User Request:
 - User accesses application via Route 53 DNS service.
 - Route 53 directs request to CloudFront CDN for global content delivery.
-  
-#### External ALB Distribution:
-- CloudFront forwards request to an external Application Load Balancer (ALB) for traffic distribution. It also delivers static assets stored in S3 bucket.
-- ALB routes request based on path and type:
+   
+#### Frontend:
+- CloudFront forwards request to an external Application Load Balancer (ALB) or the API Gateway for traffic distribution. It also delivers static assets stored in S3 bucket.
+- CloudFront routes request based on path and type:
   + API Requests: To API Gateway for handling RESTful APIs.
-  + Web Requests: To web tier (S3) for static content.
+  + Web Requests: To exterior ALB for traffic distribution.
  
 #### Security and Authentication:
 - AWS WAF: Inspects and filters incoming traffic, blocking malicious requests.
@@ -21,12 +44,10 @@ The architecture combines a traditional three-tier structure (web, app, database
 
 #### API Gateway and Lambda Functions:
 - API Gateway invokes Lambda function lambda_a for authentication and authorization (using AWS Cognito).
-- lambda_a may invoke lambda_b for database interactions via a private link, ensuring secure database access.
-- lambda_a and lambda_b are separate functions for decoupled responsibilities. Lambda_a handles authentication, authorization, and initial processing while lambda_b,
-  via a private link, communicates with RDS Proxy in the database tier for database-related activities.
+- lambda_a is a routing lambda. It routes to lambda_b, lambda_b is the main logic process function which interacts with the other systems.
 
 #### Internal ALB and App Tier:
-- Exterior ALB routes dynamic content requests to internal ALB within a private subnet.
+- Exterior ALB routes dynamic content requests to the lambda_b and internal ALB within a private subnet.
 - Internal ALB distributes requests to ECS containers running the application logic.
 
 #### Database Tier:
@@ -62,3 +83,4 @@ The architecture combines a traditional three-tier structure (web, app, database
 
 #### Link to architectural diagram:
 https://drive.google.com/file/d/16u1JkQX0JvSH5hihLGgRfYbh0wi5fw7E/view?usp=sharing
+
