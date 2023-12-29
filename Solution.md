@@ -18,12 +18,12 @@ A user accesses the application through a URL or mobile app. Route 53 directs th
 On the other hand, the exterior ALB distributes web traffic to web tier for static content, to interior ALB for dynamic content and to Lambda_b via privatelink for serverless logic. The interior ALB routes internal traffic to the app tier. Lambda_b interacts with the database tier through RDS Proxy for data operations. RDS Proxy manages database connections and optimizes performance. Processed data is returned through the reverse path to the user.
 
 ##### Networking:
-Public Subnets: Web tier and exterior ALB, accessible from the internet.
-Private Subnets: Interior ALB, app tier, database tier, protected from direct internet access.
-NAT Gateway: Enables instances in private subnets to access internet resources.
-Network ACLs (NACLs): Enforce granular traffic control at subnet level.
-Route Tables: Manage traffic routing within and between subnets.
-Availability Zones: Public and private subnets span multiple AZs for high availability.
+- Public Subnets: Web tier and exterior ALB, accessible from the internet.
+- Private Subnets: Interior ALB, app tier, database tier, protected from direct internet access.
+- NAT Gateway: Enables instances in private subnets to access internet resources.
+- Network ACLs (NACLs): Enforce granular traffic control at subnet level.
+- Route Tables: Manage traffic routing within and between subnets.
+- Availability Zones: Public and private subnets span multiple AZs for high availability.
 
 ##### CI/CD Integration with Terraform and GitHub Actions:
 Terraform the Infrastructure as Code (IaC) tool. GitHub Actions as the CI/CD tool. 
@@ -65,14 +65,14 @@ User accesses the application through a URL or mobile app. A DNS query goes to R
 The entire architecture is replicated in multiple regions for high availability and disaster recovery. Route 53 utilizes latency-based routing to direct users to the nearest region.
 
 ##### Networking:
-Public Subnets:
-API Gateway: Needs direct internet access to receive and route requests.
-Lambda for Health Check: Requires internet access to perform external health checks.
-CloudFront: Essential for public content delivery.
-Cognito User Pools: Expose endpoints for user authentication.
-Private Subnets:
-Lambda for Logic: Unless it needs to call external services but will be kept in a private subnet for security.
-DynamoDB: Enhanced security by restricting public access.
+- Public Subnets:
+  + API Gateway: Needs direct internet access to receive and route requests.
+  + Lambda for Health Check: Requires internet access to perform external health checks.
+  + CloudFront: Essential for public content delivery.
+  + Cognito User Pools: Expose endpoints for user authentication.
+- Private Subnets:
+  + Lambda for Logic: Unless it needs to call external services but will be kept in a private subnet for security.
+  + DynamoDB: Enhanced security by restricting public access.
 
 ##### CI/CD Integration with Terraform and GitHub Actions:
 Terraform as the Infrastructure as Code (IaC) and GitHub Actions as the CI/CD tool.
