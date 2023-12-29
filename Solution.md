@@ -124,24 +124,24 @@ facebook-reddit-like-app/ <br>
 
 - Frontend:
   + Web:
-  + JavaScript Frameworks:
-    * React.js: Highly popular, extensive community, great for interactive UIs.
-    * Vue.js: More lightweight and easier to learn compared to React, ideal for smaller projects.
-    * Angular: Feature-rich, good for single-page applications with complex routing.
-  + CSS Frameworks:
-    * Tailwind CSS: Utility-first approach for rapid UI development.
-    * Bootstrap: Pre-built components for faster development.
-  + State Management:
-    * Redux: Predictable state management for large applications.
-    * MobX: Reactive state management with simpler setup.
+    + JavaScript Frameworks:
+      * React.js: Highly popular, extensive community, great for interactive UIs.
+      * Vue.js: More lightweight and easier to learn compared to React, ideal for smaller projects.
+      * Angular: Feature-rich, good for single-page applications with complex routing.
+    + CSS Frameworks:
+      * Tailwind CSS: Utility-first approach for rapid UI development.
+      * Bootstrap: Pre-built components for faster development.
+    + State Management:
+      * Redux: Predictable state management for large applications.
+      * MobX: Reactive state management with simpler setup.
   
-- Mobile:
-  + Native Development:
-    * iOS: Swift & SwiftUI
-    * Android: Kotlin & Jetpack Compose
-  + Cross-platform Development:
-    * Flutter: Single codebase for both iOS and Android, fast development cycles.
-    * React Native: Leverage React knowledge for cross-platform mobile development.
+  + Mobile:
+    + Native Development:
+      * iOS: Swift & SwiftUI
+      * Android: Kotlin & Jetpack Compose
+    + Cross-platform Development:
+      * Flutter: Single codebase for both iOS and Android, fast development cycles.
+      * React Native: Leverage React knowledge for cross-platform mobile development.
 
 
 
