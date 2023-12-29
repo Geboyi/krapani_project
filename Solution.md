@@ -28,7 +28,7 @@ On the other hand, the exterior ALB distributes web traffic to web tier for stat
 #### CI/CD Integration with Terraform and GitHub Actions:
 Terraform the Infrastructure as Code (IaC) tool. GitHub Actions as the CI/CD tool.<br>
 Workflow:
-The workflow is triggered on code changes or manual events by developers. GitHub Actions initiates build and test processes to ensure code quality. Deployment artifacts are stored in an S3 bucket.  Elastic Container Service (ECS) is updated with the new deployment package in the app tier.
+The workflow is triggered on code changes or manual events by developers. GitHub Actions initiates build and test processes to ensure code quality. Deployment artifacts are stored in an S3 bucket.  Elastic Kubernetes Service (EKS) is updated with the new deployment package in the app tier.
 
 #### Other Services: 
 - Security: Effective security measures with WAF, Shield, Cognito, and private subnets.
