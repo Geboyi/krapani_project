@@ -1,7 +1,7 @@
 ## Architecture:
 Two architectural options have been designed for the facebook and reddit like application to be hosted in the cloud and be accessible on both the web and mobile. The options are listed below:
 + Hybrid Three Tier Architecture with Serverless and CI/CD.
-+ Serverless Architecture.
++ Serverless Architecture with CI/CD.
 
 ## __Hybrid Three Tier Architecture with Serveless and CI/CD__
 This architecture combines a traditional three-tier structure (web, app, database) with serverless components for flexibility and scalability.
