@@ -26,7 +26,7 @@ On the other hand, the exterior ALB distributes web traffic to web tier for stat
 - Availability Zones: Public and private subnets span multiple AZs for high availability.
 
 ##### CI/CD Integration with Terraform and GitHub Actions:
-Terraform the Infrastructure as Code (IaC) tool. GitHub Actions as the CI/CD tool. 
+Terraform the Infrastructure as Code (IaC) tool. GitHub Actions as the CI/CD tool.<br>
 Workflow:
 The workflow is triggered on code changes or manual events by developers. GitHub Actions initiates build and test processes to ensure code quality. Deployment artifacts are stored in an S3 bucket within the web tier.  Elastic Container Service (ECS) is updated with the new deployment package in the app tier.
 
@@ -75,7 +75,7 @@ The entire architecture is replicated in multiple regions for high availability 
   + DynamoDB: Enhanced security by restricting public access.
 
 ##### CI/CD Integration with Terraform and GitHub Actions:
-Terraform as the Infrastructure as Code (IaC) and GitHub Actions as the CI/CD tool.
+Terraform as the Infrastructure as Code (IaC) and GitHub Actions as the CI/CD tool.<br>
 Workflow:
 Triggered by code changes or manual events by developers. GitHub Actions initiates build and test processes to ensure code quality. Deployment artifacts are stored and Terraform is used to deploy changes to the infrastructure in a version-controlled manner. AWS Amplify smoothly integrates Terraform and GitHub Actions for continuous deployment of frontend and backend code.
 
