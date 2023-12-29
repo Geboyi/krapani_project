@@ -88,29 +88,29 @@ Triggered by code changes or manual events by developers. GitHub Actions initiat
 https://drive.google.com/file/d/1_yn3zV-wSbgivOPWraigTM3NqfjC69r6/view?usp=sharing
 
 #### Sample of directory structure for GitHub deployment
-facebook-reddit-like-app/
-|-- .github/workflows/
-|   |-- tf-ci-cd.yml     # GitHub Actions workflow for Terraform CI/CD
-|-- infra/
-|   |-- main.tf          # Main Terraform configuration for infrastructure
-|   |-- variables.tf     # Terraform variables file
-|   |-- outputs.tf       # Terraform outputs file
-|   |-- modules/	       # Terraform reusable modules
-|-- app/
-|   |-- frontend/
-|       |-- ...           # Frontend application files
-|   |-- backend/
-|       |-- ...           # Backend application files
-|-- Dockerfile/
-|   |-- ...		            # Docker application files
-|-- K8/			              # Kubernetes application files
-|   |-- deployment.yaml   # Deployment configuration
-|-- README.md             # Project documentation
-|-- .gitignore            # Gitignore file for specifying files/directories to ignore
-|-- .terraform-version    # File specifying Terraform version
-|-- .terraform/
-|   |-- ...		            # Terraform state files, exclude from version control
-|-- LICENSE               # License file
+facebook-reddit-like-app/ <br>
+|-- .github/workflows/ <br>
+|   |-- tf-ci-cd.yml     # GitHub Actions workflow for Terraform CI/CD <br>
+|-- infra/                       <br>
+|   |-- main.tf          # Main Terraform configuration for infrastructure  <br>
+|   |-- variables.tf     # Terraform variables file  <br>
+|   |-- outputs.tf       # Terraform outputs file  <br>
+|   |-- modules/	       # Terraform reusable modules  <br>
+|-- app/              <br>
+|   |-- frontend/      <br>
+|       |-- ...           # Frontend application files  <br>
+|   |-- backend/        <br>
+|       |-- ...           # Backend application files    <br>
+|-- Dockerfile/          <br>
+|   |-- ...		            # Docker application files    <br>
+|-- K8/			              # Kubernetes application files  <br>
+|   |-- deployment.yaml   # Deployment configuration    <br>
+|-- README.md             # Project documentation    <br>
+|-- .gitignore            # Gitignore file for specifying files/directories to ignore  <br>
+|-- .terraform-version    # File specifying Terraform version    <br>
+|-- .terraform/              <br>
+|   |-- ...		            # Terraform state files, exclude from version control    <br>
+|-- LICENSE               # License file    <br>
 
 
 
