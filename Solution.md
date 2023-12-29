@@ -8,9 +8,9 @@ This architecture combines a traditional three-tier structure (web, app, databas
 #### Architecture Overview:
 ##### Domains:
 This architecture has two domains. The public and private.
-Public Domain:
+* Public Domain:
 Route 53 (DNS routing), CloudFront (CDN for content delivery), IAM (Identity and Access Management), AWS WAF (Web Application Firewall), AWS Shield (Distributed Denial-of-Service protection), AWS Cognito (User authentication), API Gateway (API management for mobile requests), Lambda (Serverless functions for routing and logic), S3 (Static content storage), DynamoDB (NoSQL database).
-Private Domain:
+* Private Domain:
 PrivateLink (Secure endpoint access within VPC), VPC (Virtual Private Cloud), ALB (Application Load Balancer) - exterior for web traffic, interior for internal routing, RDS (Relational Database Service), RDS Proxy (Connection pooling and management), ElastiCache Redis (In-memory cache).
 
 ##### Flow Pattern:
@@ -53,9 +53,9 @@ This architecture is consists of serverless resources. They include:
   
 #### Architecture Overview:
 ##### Domains:
-Public Domain:
+* Public Domain:
 Route 53, CloudFront, API Gateway, Lambda (exposed as API endpoints).
-Private Domain:
+* Private Domain:
 DynamoDB
 
 ##### Flow Pattern:
