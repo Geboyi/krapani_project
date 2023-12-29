@@ -87,3 +87,30 @@ Triggered by code changes or manual events by developers. GitHub Actions initiat
 #### Link to architectural diagram of Serverless with CI/CD: 
 https://drive.google.com/file/d/1_yn3zV-wSbgivOPWraigTM3NqfjC69r6/view?usp=sharing
 
+#### Sample of directory structure for GitHub deployment
+facebook-reddit-like-app/
+|-- .github/workflows/
+|   |-- tf-ci-cd.yml     # GitHub Actions workflow for Terraform CI/CD
+|-- infra/
+|   |-- main.tf          # Main Terraform configuration for infrastructure
+|   |-- variables.tf     # Terraform variables file
+|   |-- outputs.tf       # Terraform outputs file
+|   |-- modules/	       # Terraform reusable modules
+|-- app/
+|   |-- frontend/
+|       |-- ...           # Frontend application files
+|   |-- backend/
+|       |-- ...           # Backend application files
+|-- Dockerfile/
+|   |-- ...		            # Docker application files
+|-- K8/			              # Kubernetes application files
+|   |-- deployment.yaml   # Deployment configuration
+|-- README.md             # Project documentation
+|-- .gitignore            # Gitignore file for specifying files/directories to ignore
+|-- .terraform-version    # File specifying Terraform version
+|-- .terraform/
+|   |-- ...		            # Terraform state files, exclude from version control
+|-- LICENSE               # License file
+
+
+
