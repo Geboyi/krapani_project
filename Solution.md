@@ -114,34 +114,34 @@ facebook-reddit-like-app/ <br>
 
 #### Suggested technology stack, languages and frameworks for the facebook and reddit like app
 - Backend:
-+ Languages:
-* Node.js with Express.js: A good choice for its scalability and performance, large community, and extensive library ecosystem.
-* Python with Django/Flask: Python offers clean syntax, robust web frameworks, and good integration with data science libraries if needed.
-* Java/Spring: Enterprise-grade option with high stability and security, suitable for large-scale applications.
-+ Databases:
-* NoSQL databases (MongoDB, DynamoDB): Scalable and flexible for storing user data, posts, and comments.
-* Relational databases (MySQL, PostgreSQL): If complex data relationships exist, traditional SQL databases can be beneficial.
+  + Languages:
+    * Node.js with Express.js: A good choice for its scalability and performance, large community, and extensive library ecosystem.
+    * Python with Django/Flask: Python offers clean syntax, robust web frameworks, and good integration with data science libraries if needed.
+    * Java/Spring: Enterprise-grade option with high stability and security, suitable for large-scale applications.
+  + Databases:
+    * NoSQL databases (MongoDB, DynamoDB): Scalable and flexible for storing user data, posts, and comments.
+    * Relational databases (MySQL, PostgreSQL): If complex data relationships exist, traditional SQL databases can be beneficial.
 
 - Frontend:
-++ Web:
-+ JavaScript Frameworks:
-* React.js: Highly popular, extensive community, great for interactive UIs.
-* Vue.js: More lightweight and easier to learn compared to React, ideal for smaller projects.
-* Angular: Feature-rich, good for single-page applications with complex routing.
-+ CSS Frameworks:
-* Tailwind CSS: Utility-first approach for rapid UI development.
-* Bootstrap: Pre-built components for faster development.
-+ State Management:
-* Redux: Predictable state management for large applications.
-* MobX: Reactive state management with simpler setup.
+  + Web:
+  + JavaScript Frameworks:
+    * React.js: Highly popular, extensive community, great for interactive UIs.
+    * Vue.js: More lightweight and easier to learn compared to React, ideal for smaller projects.
+    * Angular: Feature-rich, good for single-page applications with complex routing.
+  + CSS Frameworks:
+    * Tailwind CSS: Utility-first approach for rapid UI development.
+    * Bootstrap: Pre-built components for faster development.
+  + State Management:
+    * Redux: Predictable state management for large applications.
+    * MobX: Reactive state management with simpler setup.
   
 - Mobile:
-+ Native Development:
-* iOS: Swift & SwiftUI
-* Android: Kotlin & Jetpack Compose
-+ Cross-platform Development:
-* Flutter: Single codebase for both iOS and Android, fast development cycles.
-* React Native: Leverage React knowledge for cross-platform mobile development.
+  + Native Development:
+    * iOS: Swift & SwiftUI
+    * Android: Kotlin & Jetpack Compose
+  + Cross-platform Development:
+    * Flutter: Single codebase for both iOS and Android, fast development cycles.
+    * React Native: Leverage React knowledge for cross-platform mobile development.
 
 
 
